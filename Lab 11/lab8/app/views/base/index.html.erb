@@ -1,0 +1,37 @@
+<%= form_tag("/create", :method => "post") do %>
+    <table>
+        <caption><h1>Таблица ввода</h1></caption>
+        <tr>
+            <td>Введите количество чисел</td>
+            <td><%= text_field_tag :number %></td>
+        </tr>
+        <tr>
+            <td><%= submit_tag "Найти" %></td>
+            <td></td>
+        </tr>
+    </table>
+<% end %>
+
+<table id="result">
+    <caption><h1>Таблица вывода</h1></caption>
+    <tr>
+        <td class="col">Входное число</td>
+        <td class="col">Полученные числа</td>
+        <td class="col">Квадрат чисел</td>
+        <td class="col">Количество</td>
+    </tr>
+    <% @result.each do |item| %>
+        <tr>
+            <% unless item.array == "Нет чисел <= #{item.number}" %>
+                <td class="col"><%= item.number %></td>
+                <td class="col"><%= item.array %></td>
+                <td class="col"><%= item.double_array %></td>
+                <td class="col"><%= item.count %></td>
+            <% else %>
+                <td colspan="4"><%= item.array %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
+<br>
+<a href="/results">Содержимое БД</a>

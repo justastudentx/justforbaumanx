@@ -1,0 +1,13 @@
+<%= form_tag("/create", :method => "post") do %>
+    <table>
+        <caption><h1>Таблица ввода</h1></caption>
+        <tr>
+            <td>Введите количество чисел</td>
+            <td><%= text_field_tag :number %></td>
+        </tr>
+        <tr>
+            <td><%= submit_tag "Найти" %></td>
+            <td></td>
+        </tr>
+    </table>
+<% end %>

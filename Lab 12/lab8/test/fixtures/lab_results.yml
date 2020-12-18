@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  array: MyString
+  double_array: MyString
+  count: 1
+
+two:
+  number: 1
+  array: MyString
+  double_array: MyString
+  count: 1

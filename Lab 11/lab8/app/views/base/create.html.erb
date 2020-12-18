@@ -1,0 +1,35 @@
+<table id="result">
+    <caption><h1>Таблица вывода</h1></caption>
+    <tr>
+        <td class="col">Входное число</td>
+        <td class="col">Полученные числа</td>
+        <td class="col">Квадрат чисел</td>
+        <td class="col">Количество</td>
+    </tr>
+    <% @result.each do |item| %>
+        <tr>
+            <% unless item.array == "Нет чисел <= #{item.number}" %>
+                <td class="col"><%= item.number %></td>
+                <td class="col"><%= item.array %></td>
+                <td class="col"><%= item.double_array %></td>
+                <td class="col"><%= item.count %></td>
+            <% else %>
+                <td colspan="4"><%= item.array %></td>
+            <% end %>
+        </tr>
+    <% end %>
+    <% unless @is_a_new_element %>
+        <tr>
+            <% if @count > 0 %>
+                <td class="col"><%= @number %></td>
+                <td class="col"><%= @array %></td>
+                <td class="col"><%= @double_array %></td>
+                <td class="col"><%= @count %></td>
+            <% else %>
+                <td colspan="4">Нет чисел <= <%= @number %></td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
+<br>
+<a href="/">Вернуться назад</a>

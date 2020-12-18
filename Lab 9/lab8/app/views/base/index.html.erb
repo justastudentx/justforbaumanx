@@ -1,0 +1,23 @@
+<%= form_with(url: "/create.json", method: "post", id: "add") do %>
+    <table>
+        <caption><h1>Таблица ввода</h1></caption>
+        <tr>
+            <td>Введите количество чисел</td>
+            <td><%= text_field_tag :number %></td>
+        </tr>
+        <tr>
+            <td><%= submit_tag "Найти", id: "push" %></td>
+            <td></td>
+        </tr>
+    </table>
+<% end %>
+
+<table id="result">
+    <caption><h1>Таблица вывода</h1></caption>
+    <tr>
+        <td class="col">Входное число</td>
+        <td class="col">Полученные числа</td>
+        <td class="col">Квадрат чисел</td>
+        <td class="col">Количество</td>
+    </tr>
+</table>

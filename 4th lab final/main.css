@@ -1,0 +1,26 @@
+table, th, td{
+    border: 1px solid black;
+}
+
+table {
+    width: 500px;
+    margin: 10px;
+}
+
+td:hover {
+    background-color: red;
+}
+
+button {
+    border: none;
+    outline: none;
+
+    border-radius: 100px;
+
+    height: 30px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: red;
+}
